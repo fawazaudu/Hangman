@@ -1,0 +1,49 @@
+
+body{
+    background-color: white;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 70vh;
+     
+ }
+
+ .image-container{
+display: flex;
+justify-content: center;
+ }
+#img{
+    width: 300px;
+    
+    
+    
+}
+.container{
+    
+    display:flex;
+  
+    gap: 30px;
+    align-items: center;
+    height: 20vh;
+    justify-content: center;
+    flex-flow:column;
+    
+}
+
+
+.box{
+    display: flex;
+    
+    background-color: rgba(54, 126, 148, 0.6);
+    
+   
+    width: 120px;
+    height: 35px;
+    border: 5px solid rgb(129, 79, 179);
+    box-shadow: 5px 5px 5px 3px black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16%;
+    
+    
+    
+}

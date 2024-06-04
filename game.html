@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <title>Hangman Game</title>
+</head>
+<body>
+    <div class="game-container" id="game-container">
+        <label for="player1Input">Enter your name Player1:</label>
+        <input type="text" id="player1Input" required><br>
+        <label for="player2Input">Enter your name Player2:</label>
+        <input type="text" id="player2Input" required><br>
+        <button onclick="initiateGame()">Submit</button>
+    </div>
+
+    <div id="game-area" style="display: none;">
+        <p id="player-turn"></p>
+        <p id="word-display"></p>
+        <p id="correct-guesses"></p>
+        <p id="tries-remaining"></p>
+        <input type="text" id="guess-input" maxlength="1">
+        <button onclick="makeGuess()">Guess</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Function to initialize the game
+            function initiateGame() {
+                // Get player names and hide input fields
+                const player1 = document.getElementById('player1Input').value;
+                const player2 = document.getElementById('player2Input').value;
+
+                if (player1 && player2) {
+                    document.getElementById('game-container').style.display = 'none';
+                    document.getElementById('game-area').style.display = 'block';
+                    startHangmanGame(player1, player2);
+                } else {
+                    alert('Please enter names for both players.');
+                }
+            }
+
+            // Call the initialization function when the document is loaded
+            initiateGame();
+        });
+    </script>
+</body>
+</html>

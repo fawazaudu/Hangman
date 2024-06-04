@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        
+        a {
+            text-decoration: none; 
+            color: rgb(68, 43, 156);
+        }
+
+       
+        .box:hover {
+            width: 140px;
+            height: 40px;
+            background-color: rgba(19, 165, 153, 0.6);
+            font-size: 20px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+    </style>
+    <title>Hangman</title>
+</head>
+<body>
+    <div class="image-container">
+        <img src="hangman.jpeg" id="img">
+    </div>
+    
+    <div class="container">
+        <div class="box"><a href="game.html">Start game</a></div>
+        <div class="box"><a href="#" onclick="quitGame(event)">Quit</a></div>
+    </div>
+  
+
+
+    <script src="script.js"></script>
+</body>
+</html>
